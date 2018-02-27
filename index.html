@@ -5,14 +5,42 @@
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+        console.log("check");
+
+        function newRow() {
+        	var tableRef = document.getElementById("eTable").getElementsBytagName("tbody")
+
+        }
+
         
       };
     </script>
 	</head>
 	<body>
 		<div class="container" id="main">
-			Build Me!
+			<!-- Title Sectionn -->
+			<div id="headWrap">
+				<h1>GeeMail</h1>
+			</div>
+			<div id="table">
+				<!-- Main Table -->
+				<div id="eTable" >
+					<table border="1">
+						<thead>
+							<tr>
+								<th class="date">Date</th>
+								<th class="sender">Sender</th>
+								<th class="subject">Subject</th>
+								<th class="msg">Message</th>
+							</tr>
+						</thead>
+						<tbody id="content">
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 		</div>
 	</body>
-</html>
+</html> 	
