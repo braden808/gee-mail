@@ -2,8 +2,11 @@
 	text-align: center;
 }
 
-tr {
-	max-height: 10px;
+.msgdiv {
+	width: 20em;
+	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	overflow: hidden;
 }
 
 #eTable {
