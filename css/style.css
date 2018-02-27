@@ -1,0 +1,32 @@
+#headWrap {
+	text-align: center;
+}
+
+tr {
+	height:30px;
+}
+
+#eTable {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.date {
+	width: 10%;
+}
+
+.sender {
+	width: 10%;
+}
+
+.subject {
+	width: 
+}
+
+.msg {
+	width: 70%;
+}
+
+#eTable > table {
+	width: 100%;
+}
