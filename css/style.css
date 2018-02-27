@@ -3,7 +3,7 @@
 }
 
 tr {
-	height:30px;
+	max-height: 10px;
 }
 
 #eTable {
@@ -20,7 +20,7 @@ tr {
 }
 
 .subject {
-	width: 
+	width: 10%
 }
 
 .msg {
