@@ -2,10 +2,16 @@
 	<head>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
+    	
       window.onload = function(){
-      		document.getElementsByClassName('sender').appendChild(generateMessage(date));
-      	 };
+      	
+      	window.geemails.map(function(currentValue, index){
+      		var	s = currentValue.sender;
+      		document.getElementsByClassName("sender").innerHTML = 'work';
+      	}
 
+      };
+      	 //Expand Functions
         function expand1() {
       	  	var link = document.getElementById("one");
       	  	
@@ -130,11 +136,11 @@
 	<body>
 		<div class="container" id="main">
 
-			<!-- Title Sectionn -->
+			<!-- Title Section -->
 
 			<div id="headWrap">
 				<h1>GeeMail</h1>
-			</div>
+			</div>s
 			<div id="table">
 
 				<!-- Main Table -->
@@ -158,7 +164,7 @@
 							<!-- One -->
 							<tr onclick="expand1()">
 								<td class="date"></td>
-								<td id="sender"></td>
+								<td class="sender"></td>
 								<td class="subject"></td>
 								<td>
 									<div id="one" class="msgdiv"></div>
@@ -254,5 +260,4 @@
 		</div>
 	</body>
 	<script src="js/mail-generator.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>
