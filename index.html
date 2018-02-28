@@ -4,14 +4,130 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE.
-        function expand() {
-        	document.getElementById("one").removeAttribute("class");
+
+      	// document.getElementById("snd1").appendChild(getRandomElement(sender));
+
+      	// };
+
+        function expand1() {
+      	  	var link = document.getElementById("one");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
         };
 
+        function expand2() {
+      	  	var link = document.getElementById("two");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
 
+        function expand3() {
+      	  	var link = document.getElementById("three");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
 
-    };
+        function expand4() {
+      	  	var link = document.getElementById("four");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+
+        function expand5() {
+      	  	var link = document.getElementById("five");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+
+        function expand6() {
+      	  	var link = document.getElementById("six");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+
+        function expand7() {
+      	  	var link = document.getElementById("seven");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+
+        function expand8() {
+      	  	var link = document.getElementById("eight");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+
+        function expand9() {
+      	  	var link = document.getElementById("nine");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+        };
+        function expand10() {
+      	  	var link = document.getElementById("ten");
+      	  	
+      	  	if (link.className == "msgdiv") {
+      	  		console.log("open");
+      	  		link.className = " ";
+      	  	} else if (link.className == " ") {
+      	  		console.log("close");
+      	  		link.className = "msgdiv";
+      	  	}
+
+      	};
 
     </script>
 	</head>
@@ -27,7 +143,7 @@
 
 				<!-- Main Table -->
 
-				<div id="eTable" >
+				<div id="eTable">
 
 					<table id="myTable" border="1">
 						<thead>
@@ -44,10 +160,10 @@
 
 						<tbody id="content">
 							<!-- One -->
-							<tr onclick="expand()">
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand1()">
+								<td class="dt"></td>
+								<td id="snd1"></td>
+								<td class="sbjct"></td>
 								<td>
 									<div id="one" class="msgdiv">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
