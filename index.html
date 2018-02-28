@@ -1,13 +1,10 @@
 <html>
 	<head>
-		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-
-      	// document.getElementById("snd1").appendChild(getRandomElement(sender));
-
-      	// };
+      		document.getElementsByClassName('sender').appendChild(generateMessage(date));
+      	 };
 
         function expand1() {
       	  	var link = document.getElementById("one");
@@ -126,8 +123,7 @@
       	  		console.log("close");
       	  		link.className = "msgdiv";
       	  	}
-
-      	};
+    };
 
     </script>
 	</head>
@@ -151,9 +147,9 @@
 							<th class="sub">INBOX</th>
 						</tr>
 							<tr>
-								<th class="date">Date</th>
-								<th class="sender">Sender</th>
-								<th class="subject">Subject</th>
+								<th class="dt">Date</th>
+								<th class="sndr">Sender</th>
+								<th class="sbjct">Subject</th>
 								<th class="msg">Message</th>
 							</tr>
 						</thead>
@@ -161,95 +157,90 @@
 						<tbody id="content">
 							<!-- One -->
 							<tr onclick="expand1()">
-								<td class="dt"></td>
-								<td id="snd1"></td>
-								<td class="sbjct"></td>
+								<td class="date"></td>
+								<td id="sender"></td>
+								<td class="subject"></td>
 								<td>
-									<div id="one" class="msgdiv">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+									<div id="one" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Two -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand2()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="two" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Three -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand3()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="three" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Four -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand4()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="four" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Five -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand5()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="five" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Six -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand6()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="six" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Seven -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand7()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="seven" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Eight -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand8()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="eight" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Nine -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand9()"">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="nine" class="msgdiv"></div>
 								</td>
 							</tr>
 							<!-- Ten -->
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr onclick="expand10()">
+								<td class="date"></td>
+								<td class="sender"></td>
+								<td class="subject"></td>
 								<td>
 									<div id="ten" class="msgdiv"></div>
 								</td>
@@ -262,4 +253,6 @@
 
 		</div>
 	</body>
+	<script src="js/mail-generator.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>
