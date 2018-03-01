@@ -4,11 +4,26 @@
     <script>
     	
       window.onload = function(){
-      	
-      	window.geemails.map(function(currentValue, index){
-      		var	s = currentValue.sender;
-      		document.getElementsByClassName("sender").innerHTML = 'work';
+
+
+      	for (var i = 0; i < geemails.length; i++) {
+  	    	var dateDoc = document.getElementsByClassName("date");
+  	    	var subjectDoc = document.getElementsByClassName("subject");
+  	    	var senderDoc = document.getElementsByClassName("sender");
+  	    	var bodyDoc = document.getElementsByClassName("msgdiv");
+
+      		var date = window.geemails[i].date;
+      		var subject = window.geemails[i].subject;
+      		var sender = window.geemails[i].sender;
+      		var body = window.geemails[i].body;
+
+      		dateDoc[i].innerHTML = window.geemails[i].date;
+      		subjectDoc[i].innerHTML = window.geemails[i].subject;
+      		senderDoc[i].innerHTML = window.geemails[i].sender;
+      		bodyDoc[i].innerHTML = window.geemails[i].body;
+
       	}
+
 
       };
       	 //Expand Functions
@@ -260,4 +275,5 @@
 		</div>
 	</body>
 	<script src="js/mail-generator.js"></script>
+
 </html>
