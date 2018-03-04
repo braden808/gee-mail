@@ -1,279 +1,656 @@
 <html>
+
 	<head>
+
+      <title>GEEMAIL</title>
+
+    <!-- adding in bootstrap for easier styling -->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    
+
 		<link href="css/style.css" rel="stylesheet" media="screen">
+
+    
+
     <script>
+
     	
+
       window.onload = function(){
 
 
+
       	for (var i = 0; i < geemails.length; i++) {
+
   	    	var dateDoc = document.getElementsByClassName("date");
+
   	    	var subjectDoc = document.getElementsByClassName("subject");
+
   	    	var senderDoc = document.getElementsByClassName("sender");
+
   	    	var bodyDoc = document.getElementsByClassName("msgdiv");
 
+
+
       		var date = window.geemails[i].date;
+
       		var subject = window.geemails[i].subject;
+
       		var sender = window.geemails[i].sender;
+
       		var body = window.geemails[i].body;
 
-      		dateDoc[i].innerHTML = window.geemails[i].date;
-      		subjectDoc[i].innerHTML = window.geemails[i].subject;
-      		senderDoc[i].innerHTML = window.geemails[i].sender;
-      		bodyDoc[i].innerHTML = window.geemails[i].body;
+
+
+      		dateDoc[i].innerHTML = date;
+
+      		subjectDoc[i].innerHTML = subject;
+
+      		senderDoc[i].innerHTML = sender;
+
+      		bodyDoc[i].innerHTML = body;
+
+
 
       	}
 
 
+
       };
-      	 //Expand Functions
+
+      	 
+
+         //Expand Functions
+
         function expand1() {
-      	  	var link = document.getElementById("one");
-      	  	
-      	  	if (link.className == "msgdiv") {
-      	  		console.log("open");
-      	  		link.className = " ";
-      	  	} else if (link.className == " ") {
-      	  		console.log("close");
-      	  		link.className = "msgdiv";
-      	  	}
+
+            var link = document.getElementById("one");
+
+            
+
+            if (link.className == "msgdiv") {
+
+              console.log("open");
+
+              link.className = " ";
+
+            } else if (link.className == " ") {
+
+              console.log("close");
+
+              link.className = "msgdiv";
+
+            }
+
         };
+
+
 
         function expand2() {
+
       	  	var link = document.getElementById("two");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand3() {
+
       	  	var link = document.getElementById("three");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand4() {
+
       	  	var link = document.getElementById("four");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand5() {
+
       	  	var link = document.getElementById("five");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand6() {
+
       	  	var link = document.getElementById("six");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand7() {
+
       	  	var link = document.getElementById("seven");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand8() {
+
       	  	var link = document.getElementById("eight");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
+
 
         function expand9() {
+
       	  	var link = document.getElementById("nine");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
+
         };
+
         function expand10() {
+
       	  	var link = document.getElementById("ten");
+
       	  	
+
       	  	if (link.className == "msgdiv") {
+
       	  		console.log("open");
+
       	  		link.className = " ";
+
       	  	} else if (link.className == " ") {
+
       	  		console.log("close");
+
       	  		link.className = "msgdiv";
+
       	  	}
-    };
+
+        };
+
+
+
+        // Set up Arrays for new messages
+
+        var newMessageArrayDate = [];
+
+        var newMessageArraySubject = [];
+
+        var newMessageArraySender = [];
+
+        var newMessageArraybody = [];
+
+
+
+        // //SetInterval and runs newMessage function every 10 sec
+
+        var incoming = setInterval(newMessage,10000);
+
+        function newMessage(){
+
+            // Pushes New message data into the newMessageArrays 
+
+            newMessageArrayDate.push(getNewMessage().date);
+
+            newMessageArraySubject.push(getNewMessage().subject);
+
+            newMessageArraySender.push(getNewMessage().sender);
+
+            newMessageArraybody.push(getNewMessage().body);
+
+
+
+            var row = document.createElement('tr');
+
+            var main = document.getElementById('content');
+
+            main.appendChild(row);
+
+            
+
+            var getRow = document.getElementsByTagName('tr');
+
+
+
+            for (var i = 13; i < getRow.length; i++) {
+
+
+
+            // Assigning messages info stored in the arrays to variable that changes every 10 seconds
+
+            var date = newMessageArrayDate[i-13];
+
+            var subject = newMessageArraySubject[i-13];
+
+            var sender = newMessageArraySender[i-13];
+
+            var body = newMessageArraybody[i-13];
+
+
+
+            //pushes data stored in variables into the table
+
+            getRow[i].innerHTML = '<td class="date">'+ date +'</td>' 
+
+            + '<td class="subject">'+ sender +'</td>'
+
+            + '<td class="sender">'+ subject +'</td>' 
+
+            +'<td><div>'+ body +'</div></td>';
+
+            
+
+         }
+
+            // Get the current email count
+
+            var emailCount = document.getElementsByTagName("tr").length;
+
+            console.log(emailCount);
+
+
+
+        }
+
+
 
     </script>
+
 	</head>
+
 	<body>
-		<div class="container" id="main">
 
-			<!-- Title Section -->
 
-			<div id="headWrap">
-				<h1>GeeMail</h1>
-			</div>s
-			<div id="table">
 
-				<!-- Main Table -->
+      <!-- Title Section using jumbotron from bootstrap-->
 
-				<div id="eTable">
+      <div class="jumbotron text-center">
 
-					<table id="myTable" border="1">
-						<thead>
+          <h1>GEEMAIL</h1>
+
+          <p>Not you regular email!</p> 
+
+      </div>
+
+
+
+   		
+
+      <div class="container" id="main">
+
+
+
+		
+
+		  		<table id="myTable" class="table table-striped table-hover">
+
+						
+
+            <!-- table head -->
+
+            <thead>
+
 						<tr class="subtr">
-							<th class="sub">INBOX</th>
+
+							<th><h2>INBOX</h2></th>
+
 						</tr>
+
 							<tr>
+
 								<th class="dt">Date</th>
+
 								<th class="sndr">Sender</th>
+
 								<th class="sbjct">Subject</th>
+
 								<th class="msg">Message</th>
+
 							</tr>
+
 						</thead>
 
+            <!-- table body -->
+
 						<tbody id="content">
+
 							<!-- One -->
+
 							<tr onclick="expand1()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="one" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Two -->
+
 							<tr onclick="expand2()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="two" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Three -->
+
 							<tr onclick="expand3()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="three" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Four -->
+
 							<tr onclick="expand4()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="four" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Five -->
+
 							<tr onclick="expand5()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="five" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Six -->
+
 							<tr onclick="expand6()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="six" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Seven -->
+
 							<tr onclick="expand7()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="seven" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Eight -->
+
 							<tr onclick="expand8()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="eight" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Nine -->
+
 							<tr onclick="expand9()"">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="nine" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
 							<!-- Ten -->
+
 							<tr onclick="expand10()">
+
 								<td class="date"></td>
+
 								<td class="sender"></td>
+
 								<td class="subject"></td>
+
 								<td>
+
 									<div id="ten" class="msgdiv"></div>
+
 								</td>
+
 							</tr>
+
+              <tr>
+
+                <td><h2>New Email</h2></td>
+
+              </tr>
+
+
 
 						</tbody>
+
 					</table>
+
 				</div>
+
 			</div>
 
+
+
 		</div>
+
 	</body>
+
 	<script src="js/mail-generator.js"></script>
 
+
+
 </html>
+
