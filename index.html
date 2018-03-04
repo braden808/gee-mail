@@ -20,7 +20,7 @@
 
       window.onload = function(){
 
-
+      	// function to place data into html
 
       	for (var i = 0; i < geemails.length; i++) {
 
@@ -62,7 +62,7 @@
 
       	 
 
-         //Expand Functions
+         //Expand Functions for messages
 
         function expand1() {
 
@@ -302,16 +302,9 @@
 
 
 
-        // Set up Arrays for new messages
+        // Set up Array for new messages
 
-        var newMessageArrayDate = [];
-
-        var newMessageArraySubject = [];
-
-        var newMessageArraySender = [];
-
-        var newMessageArraybody = [];
-
+        var newMessageArray = [];
 
 
         // //SetInterval and runs newMessage function every 10 sec
@@ -322,15 +315,10 @@
 
             // Pushes New message data into the newMessageArrays 
 
-            newMessageArrayDate.push(getNewMessage().date);
 
-            newMessageArraySubject.push(getNewMessage().subject);
+            newMessageArray.push(getNewMessage());
 
-            newMessageArraySender.push(getNewMessage().sender);
-
-            newMessageArraybody.push(getNewMessage().body);
-
-
+            //creates a brand new row
 
             var row = document.createElement('tr');
 
@@ -350,13 +338,13 @@
 
             // Assigning messages info stored in the arrays to variable that changes every 10 seconds
 
-            var date = newMessageArrayDate[i-13];
+            var date = newMessageArray[i-13].date;
 
-            var subject = newMessageArraySubject[i-13];
+            var subject = newMessageArray[i-13].subject;
 
-            var sender = newMessageArraySender[i-13];
+            var sender = newMessageArray[i-13].sender;
 
-            var body = newMessageArraybody[i-13];
+            var body = newMessageArray[i-13].body;
 
 
 
@@ -376,9 +364,12 @@
 
             // Get the current email count
 
-            var emailCount = document.getElementsByTagName("tr").length;
+            var emailCount = document.getElementsByTagName("tr").length - 3;
 
             console.log(emailCount);
+
+            var getCount = document.getElementById('emailCounter');
+            getCount.innerHTML = '('+ emailCount + ' Messages)'
 
 
 
@@ -424,7 +415,10 @@
 
 						<tr class="subtr">
 
-							<th><h2>INBOX</h2></th>
+							<th>
+								<h2>INBOX</h2>
+								<span id="emailCounter">(10 Messages)</span>
+							</th>
 
 						</tr>
 
@@ -626,11 +620,13 @@
 
 							</tr>
 
-              <tr>
+							<!-- setting up for incoming emails -->
 
-                <td><h2>New Email</h2></td>
+				            <tr>
 
-              </tr>
+				              <td><h2>New Email</h2></td>
+
+				            </tr>
 
 
 
