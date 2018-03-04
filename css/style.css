@@ -11,11 +11,11 @@
 
 #eTable {
 	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 }
 
 .dt {
-	width: 10%;
+	width: 30%;
 }
 
 .sndr {
@@ -27,7 +27,7 @@
 }
 
 .msg {
-	width: 70%;
+	width: 50%;
 }
 
 #eTable > table {
