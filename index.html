@@ -20,7 +20,11 @@
 
       window.onload = function(){
 
-      	// function to place data into html
+
+
+        var getRow = document.getElementsByTagName('tr');
+
+
 
       	for (var i = 0; i < geemails.length; i++) {
 
@@ -44,285 +48,59 @@
 
 
 
-      		dateDoc[i].innerHTML = date;
+          var row = document.createElement('tr');
 
-      		subjectDoc[i].innerHTML = subject;
+          var main = document.getElementById('content');
 
-      		senderDoc[i].innerHTML = sender;
+          row.className = 'expand';
 
-      		bodyDoc[i].innerHTML = body;
+          main.appendChild(row);
 
+            
 
+         
+
+          //pushes data stored in geemails arrays into the table (rows 2 - 12)
+
+          getRow[i + 2].innerHTML = '<td class="date">'+ date +'</td>' 
+
+            + '<td class="subject">'+ sender +'</td>'
+
+            + '<td class="sender">'+ subject +'</td>' 
+
+            + '<td class="body"><div class = "msgdiv">'+ body +'</div></td>';
+
+          
 
       	}
 
 
 
-      };
+       };
 
-      	 
-
-         //Expand Functions for messages
-
-        function expand1() {
-
-            var link = document.getElementById("one");
-
-            
-
-            if (link.className == "msgdiv") {
-
-              console.log("open");
-
-              link.className = " ";
-
-            } else if (link.className == " ") {
-
-              console.log("close");
-
-              link.className = "msgdiv";
-
-            }
-
-        };
-
-
-
-        function expand2() {
-
-      	  	var link = document.getElementById("two");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand3() {
-
-      	  	var link = document.getElementById("three");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand4() {
-
-      	  	var link = document.getElementById("four");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand5() {
-
-      	  	var link = document.getElementById("five");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand6() {
-
-      	  	var link = document.getElementById("six");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand7() {
-
-      	  	var link = document.getElementById("seven");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand8() {
-
-      	  	var link = document.getElementById("eight");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        function expand9() {
-
-      	  	var link = document.getElementById("nine");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-        function expand10() {
-
-      	  	var link = document.getElementById("ten");
-
-      	  	
-
-      	  	if (link.className == "msgdiv") {
-
-      	  		console.log("open");
-
-      	  		link.className = " ";
-
-      	  	} else if (link.className == " ") {
-
-      	  		console.log("close");
-
-      	  		link.className = "msgdiv";
-
-      	  	}
-
-        };
-
-
-
-        // Set up Array for new messages
-
-        var newMessageArray = [];
 
 
         // //SetInterval and runs newMessage function every 10 sec
+
+        
 
         var incoming = setInterval(newMessage,10000);
 
         function newMessage(){
 
-            // Pushes New message data into the newMessageArrays 
+            // Pushes New message object into the newMessageArray 
+
+            var i = 11
+
+            geemails.push(getNewMessage());
 
 
-            newMessageArray.push(getNewMessage());
-
-            //creates a brand new row
 
             var row = document.createElement('tr');
 
             var main = document.getElementById('content');
+
+            row.className = 'expand';
 
             main.appendChild(row);
 
@@ -332,23 +110,21 @@
 
 
 
-            for (var i = 13; i < getRow.length; i++) {
+            console.log(i);
+
+            // Assigning messages stored in array to variable. These update with interval update. 
+
+            var date = geemails[i-11].date;
+
+            var subject = geemails[i-11].subject;
+
+            var sender = geemails[i-11].sender;
+
+            var body = geemails[i-11].body;
 
 
 
-            // Assigning messages info stored in the arrays to variable that changes every 10 seconds
-
-            var date = newMessageArray[i-13].date;
-
-            var subject = newMessageArray[i-13].subject;
-
-            var sender = newMessageArray[i-13].sender;
-
-            var body = newMessageArray[i-13].body;
-
-
-
-            //pushes data stored in variables into the table
+            //pushes data stored in variables into the table starting with the 13th row
 
             getRow[i].innerHTML = '<td class="date">'+ date +'</td>' 
 
@@ -356,24 +132,89 @@
 
             + '<td class="sender">'+ subject +'</td>' 
 
-            +'<td><div>'+ body +'</div></td>';
+            + '<td><div class = "msgdiv">'+ body +'</div></td>';
 
-            
+         
 
-         }
+
 
             // Get the current email count
 
-            var emailCount = document.getElementsByTagName("tr").length - 3;
+            var emailCount = document.getElementsByTagName("tr").length - 2;
 
-            console.log(emailCount);
+            var getCount = document.getElementById('count');
 
-            var getCount = document.getElementById('emailCounter');
-            getCount.innerHTML = '('+ emailCount + ' Messages)'
+            // console.log(emailCount);
+
+            getCount.innerHTML = '( ' + emailCount + ' Messages )' 
 
 
 
-        }
+            i++
+
+
+
+          }
+
+   
+
+                 // ------------------------------------------------------------------------------
+
+          // var refresh = 
+
+          setInterval(clickMe,1000);      
+
+          function clickMe(){
+
+                    var expandMeVar = document.querySelectorAll("tr.expand");
+
+                    for(var x=0; x<expandMeVar.length; x++)
+
+                    {
+
+                    expandMeVar[x].addEventListener("click", function()
+
+                    
+
+                          {
+
+                          var link = this.querySelector("div");
+
+                            if (link.className == "msgdiv") 
+
+                          {
+
+                            console.log(x);
+
+                            console.log("open");
+
+                            link.className = " ";
+
+                          } 
+
+                            else 
+
+                          {
+
+                            console.log(x);
+
+                            console.log("close");
+
+                            link.className = "msgdiv";
+
+                          }
+
+
+
+                        });
+
+                    }
+
+          }
+
+                 // ------------------------------------------------------------------------------
+
+        
 
 
 
@@ -416,13 +257,16 @@
 						<tr class="subtr">
 
 							<th>
-								<h2>INBOX</h2>
-								<span id="emailCounter">(10 Messages)</span>
-							</th>
+
+                <h2>INBOX</h2>
+
+                <span id="count">( 10 Messages )</span>
+
+              </th>
 
 						</tr>
 
-							<tr>
+            <tr>
 
 								<th class="dt">Date</th>
 
@@ -432,201 +276,13 @@
 
 								<th class="msg">Message</th>
 
-							</tr>
+						</tr>
 
 						</thead>
 
             <!-- table body -->
 
 						<tbody id="content">
-
-							<!-- One -->
-
-							<tr onclick="expand1()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="one" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Two -->
-
-							<tr onclick="expand2()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="two" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Three -->
-
-							<tr onclick="expand3()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="three" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Four -->
-
-							<tr onclick="expand4()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="four" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Five -->
-
-							<tr onclick="expand5()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="five" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Six -->
-
-							<tr onclick="expand6()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="six" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Seven -->
-
-							<tr onclick="expand7()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="seven" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Eight -->
-
-							<tr onclick="expand8()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="eight" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Nine -->
-
-							<tr onclick="expand9()"">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="nine" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- Ten -->
-
-							<tr onclick="expand10()">
-
-								<td class="date"></td>
-
-								<td class="sender"></td>
-
-								<td class="subject"></td>
-
-								<td>
-
-									<div id="ten" class="msgdiv"></div>
-
-								</td>
-
-							</tr>
-
-							<!-- setting up for incoming emails -->
-
-				            <tr>
-
-				              <td><h2>New Email</h2></td>
-
-				            </tr>
 
 
 
