@@ -10,7 +10,7 @@
 
     
 
-  <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
 
     
 
@@ -24,7 +24,7 @@
 
         var getRow = document.getElementsByTagName('tr');
 
-
+        
 
         for (var i = 0; i < geemails.length; i++) {
 
@@ -83,6 +83,20 @@
             + '<td class="sender">'+ subject +'</td>' 
 
             + '<td class="body"><div class = "msgdiv">'+ body +'</div></td>';
+
+
+
+          document.getElementById("closeButton").addEventListener("click", function(){
+
+          var closeAll = document.querySelectorAll("tr td div");
+
+          for (var i = 0; i < closeAll.length; i++) {
+
+          closeAll[i].className = "msgdiv";
+
+          }
+
+          });
 
           
 
@@ -182,9 +196,9 @@
 
             i++
 
-
-
           }
+
+
 
 
 
@@ -203,6 +217,8 @@
           <h1>GEEMAIL</h1>
 
           <p>Not you regular email!</p> 
+
+          <button id="closeButton" type="button" class="btn btn-success button-lg">Close All Email</button>
 
       </div>
 
