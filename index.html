@@ -26,7 +26,7 @@
 
         
 
-        for (var i = 0; i < geemails.length; i++) {
+         for (var i = 0; i < geemails.length; i++) {
 
 
 
@@ -57,6 +57,8 @@
             document.querySelectorAll(".expand")[i].addEventListener("click", function(){
 
               // checks the div elements and changes the class to close or expand the message via css
+
+              this.style.fontWeight = "normal";  //makes the row unbolded as it's been read
 
               var link = this.querySelector("div");
 
@@ -144,6 +146,8 @@
 
               // checks the div elements and changes the class to close or expand the message via css                         
 
+                this.style.fontWeight = "normal"; //makes the row unbolded as it's been read
+
                 var link = this.querySelector("div");
 
                 if (link.className == "msgdiv") {
@@ -212,7 +216,7 @@
 
       <!-- Title Section using jumbotron from bootstrap-->
 
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" data-spy="affixed" data-offset-top>
 
           <h1>GEEMAIL</h1>
 
